@@ -114,6 +114,13 @@
       },
       "url": "https://packages.unity.cn"
     },
+    "com.unity.inputsystem": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.cn"
+    },
     "com.unity.nuget.newtonsoft-json": {
       "version": "2.0.0",
       "depth": 1,
@@ -186,15 +193,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "dev.yarnspinner.unity": {
-      "version": "2.1.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.textmeshpro": "1.4.1"
-      },
-      "url": "https://package.openupm.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
