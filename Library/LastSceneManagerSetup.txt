@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/tyt_dialog/tyt_Scene/chatScene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0

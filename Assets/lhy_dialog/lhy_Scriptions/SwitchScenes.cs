@@ -20,6 +20,6 @@ public class SwitchScenes : MonoBehaviour
     public void OnLoadGoInBtn()
     {
         Debug.Log("hello");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("hjyScene");
     }
 }
