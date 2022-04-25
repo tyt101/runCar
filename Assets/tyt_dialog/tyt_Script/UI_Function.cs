@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_Function : MonoBehaviour
@@ -12,9 +13,9 @@ public class UI_Function : MonoBehaviour
         button.onClick.AddListener(load);
     }
     //此处待补充需要加载页面
-    private void load()
+    public void load()
     {
-        Debug.Log("加载进入");
         InteratorDialog.instance.btn.SetActive(false);
+        SceneManager.LoadScene(1);
     }
 }
