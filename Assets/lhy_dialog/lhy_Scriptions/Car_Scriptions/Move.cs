@@ -8,6 +8,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float speed = 1.5f;//车移动的速度
+    public float speed1 = -1.5f;//车移动的速度
     //[HideInInspector]
     public float rotationAngle = 45f;//改变方向时旋转的角度
     public void Update()
@@ -22,6 +23,10 @@ public class Move : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W))//按下W键向前移动
         {
+            if (speed <= 5)
+            {
+                speed += 0.1f;
+            }
             this.transform.Translate(0, 0, speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))//按下D键向右旋转
@@ -39,6 +44,16 @@ public class Move : MonoBehaviour
         if(Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.A))
         {
             this.transform.Rotate(0, -50f * Time.deltaTime, 0);
+        }
+        if (Input.GetKey(KeyCode.S))//按下W键向前移动
+        {
+            
+            //speed = -1.5f;
+            if (speed1 >= -5)
+            {
+                speed1 += -0.1f;
+            }
+            this.transform.Translate(0, 0, speed1 * Time.deltaTime);
         }
     }
 }
