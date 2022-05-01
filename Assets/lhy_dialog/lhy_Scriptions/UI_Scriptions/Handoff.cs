@@ -7,6 +7,7 @@ public class Handoff : MonoBehaviour
 {
     static bool eSpace = false;
     static bool rSpace = false;
+
     /// <summary>
     /// 触发存档点击事件
     /// </summary>
@@ -26,6 +27,7 @@ public class Handoff : MonoBehaviour
             eSpace = true;
         }
     }
+
     /// <summary>
     /// 触发读档点击事件
     /// </summary>
