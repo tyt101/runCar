@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6749122002916152078}
   m_Layer: 0
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,23 +93,6 @@ Transform:
   m_Father: {fileID: 6749122002916152078}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6749122003343208587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6749313746736338437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c37c3247b49b893459802265ffacb59c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointList:
-  - {fileID: 6749122003989306338}
-  - {fileID: 6749122004387412433}
-  _root: {fileID: 6749122002916152065}
-  moveSpeed: 2
 --- !u!65 &2262630959972605750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136,6 +119,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0743309, z: 1.8074837}
   m_Center: {x: 0, y: 0.3914104, z: 0.15405083}
+--- !u!114 &6749122003343208587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6749313746736338437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37c3247b49b893459802265ffacb59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointList:
+  - {fileID: 6749122003989306338}
+  - {fileID: 6749122004387412433}
+  _root: {fileID: 6749122002916152065}
+  moveSpeed: 2
 --- !u!1001 &6749122002826111959
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1589,7 +1589,7 @@ GameObject:
   - component: {fileID: 4225093647529545409}
   m_Layer: 20
   m_Name: Boar Red
-  m_TagString: Animal
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

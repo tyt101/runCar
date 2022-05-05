@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class Move : MonoBehaviour
 {
-    public float speed = 0.1f;//车移动的速度
-    public float speed1 = -0.1f;//车移动的速度
+    public float speed = 3;//车移动的速度
+    public float speed1 = -3;//车移动的速度
     //[HideInInspector]
     public float rotationAngle = 45f;//改变方向时旋转的角度
     public void FixedUpdate()
@@ -23,7 +23,7 @@ public class Move : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.W))//按下W键向前移动
         {
-            if (speed <= 5)
+            if (speed <= 3)
             {
                 speed += 0.1f;
             }
@@ -49,7 +49,7 @@ public class Move : MonoBehaviour
         {
             
             //speed = -1.5f;
-            if (speed1 >= -5)
+            if (speed1 >= -3)
             {
                 speed1 += -0.1f;
             }
@@ -61,7 +61,7 @@ public class Move : MonoBehaviour
         if(col.gameObject.tag=="obstacle")
         {
             this.transform.Translate(-Vector3.forward);
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(100);
         }
     }
 }

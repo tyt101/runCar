@@ -7,6 +7,22 @@ public class HealthBar : MonoBehaviour
 {
     public float damageValue = 10f;//每次碰撞的损伤值
     GameObject healthBar;//定义血条对象
+                         //实例
+    public static HealthBar instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
     public void Start()
     {
         healthBar = GameObject.Find("Canvas/HealthBars");//获取血条对象
@@ -28,9 +44,14 @@ public class HealthBar : MonoBehaviour
     {
         if(other.tag == "obstacle")//如果障碍物不是地形
         {
-            //Debug.Log("障碍物的名字是：" + other.name);
+            Debug.Log("障碍物的名字是：" + other.name);
             Damage();//减血
         }
+        //if(other.tag == "Animal")
+        //{
+        //    Debug.Log("动物的名字是：" + other.name);
+        //    Damage();
+        //}
     }
 
     /// <summary>

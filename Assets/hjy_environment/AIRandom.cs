@@ -85,7 +85,7 @@ public class AIRandom : MonoBehaviour
         {
             temp = false;
             //设人物模型行为状态为走路
-            m_Animator.SetBool("idle", false);
+          //  m_Animator.SetBool("idle", false);
         }
         //换一种走路方式，这里是按顺序，你也可以改成随机
         key++;

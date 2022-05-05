@@ -56,12 +56,14 @@ public class NPCScript : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other)
-    {;
+    {
         if (other.gameObject.tag == "Player")
         {
+
             Debug.Log("Player Enterner");
             isCanMove = false;
             _ani.SetBool("death?", true);
+            HealthBar.instance.Damage();
             Destroy(_root, 3);
         }
     }
