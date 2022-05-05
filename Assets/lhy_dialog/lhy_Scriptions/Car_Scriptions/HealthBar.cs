@@ -26,7 +26,7 @@ public class HealthBar : MonoBehaviour
     /// <param name="other">触发器</param>
     public void OnTriggerEnter(Collider other)
     {
-        if(other.name!= "Terrain (1)")//如果障碍物不是地形
+        if(other.tag == "obstacle")//如果障碍物不是地形
         {
             //Debug.Log("障碍物的名字是：" + other.name);
             Damage();//减血

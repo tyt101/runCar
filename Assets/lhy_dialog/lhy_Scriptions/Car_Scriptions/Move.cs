@@ -7,11 +7,11 @@ using UnityEngine;
 /// </summary>
 public class Move : MonoBehaviour
 {
-    public float speed = 1.5f;//车移动的速度
-    public float speed1 = -1.5f;//车移动的速度
+    public float speed = 0.1f;//车移动的速度
+    public float speed1 = -0.1f;//车移动的速度
     //[HideInInspector]
     public float rotationAngle = 45f;//改变方向时旋转的角度
-    public void Update()
+    public void FixedUpdate()
     {
         MoveState();
     }
@@ -31,11 +31,11 @@ public class Move : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))//按下D键向右旋转
         {
-            this.transform.Rotate(0, rotationAngle * Time.deltaTime, 0);
+            this.transform.Rotate(0, rotationAngle * Time.deltaTime*2, 0);
         }
         if(Input.GetKey(KeyCode.A))//按下A键向左旋转
         {
-            this.transform.Rotate(0, -rotationAngle * Time.deltaTime, 0);
+            this.transform.Rotate(0, -rotationAngle * Time.deltaTime*2, 0);
         }
         if(Input.GetKey(KeyCode.Z)&& Input.GetKey(KeyCode.D))
         {
@@ -54,6 +54,14 @@ public class Move : MonoBehaviour
                 speed1 += -0.1f;
             }
             this.transform.Translate(0, 0, speed1 * Time.deltaTime);
+        }
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.gameObject.tag=="obstacle")
+        {
+            this.transform.Translate(-Vector3.forward);
+            System.Threading.Thread.Sleep(500);
         }
     }
 }

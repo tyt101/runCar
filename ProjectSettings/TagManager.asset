@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - collision
+  - Animal
+  - obstacle
+  - coin
   layers:
   - Default
   - TransparentFX
