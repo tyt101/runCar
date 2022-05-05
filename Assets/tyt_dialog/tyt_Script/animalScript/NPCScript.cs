@@ -56,9 +56,10 @@ public class NPCScript : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag=="Player")
+    {;
+        if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Player Enterner");
             isCanMove = false;
             _ani.SetBool("death?", true);
             Destroy(_root, 3);
