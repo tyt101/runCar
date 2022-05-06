@@ -28,7 +28,7 @@ public class InteratorDialog : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        //ontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {

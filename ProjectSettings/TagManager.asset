@@ -8,6 +8,8 @@ TagManager:
   - Animal
   - obstacle
   - coin
+  - Car
+  - Doctor
   layers:
   - Default
   - TransparentFX

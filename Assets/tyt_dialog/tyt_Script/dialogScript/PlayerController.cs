@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     //public
@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     //private
     public bool canMove = true;
     private bool isMove = false;
+    public bool hasCar;
+    private string[] lines;
     void Start()
     {
         m_animator = GetComponent<Animator>();
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour
             }
             if (isMove)
             {
-                if (speed < 1)
+                if (speed < 2)
                     speed += 0.05f;
             }
             else
@@ -56,5 +58,36 @@ public class PlayerController : MonoBehaviour
                 this.transform.Rotate(0, 1, 0);
         }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Car")
+        {
+            Debug.Log("Car");
+            if (SearchDialogManager.instance.currentLine >= SearchDialogManager.instance.dialogueLines.Length)
+            {
+                hasCar = true;
+            }
+        }
+        else if (other.gameObject.tag == "Doctor")
+        {
+            SearchDialogManager.instance.currentIndex();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Doctor")
+        {
+            if (hasCar)
+            {
+                if (SearchDialogManager.instance.currentLine >= SearchDialogManager.instance.dialogueLines.Length)
+                {
+                    Debug.Log(")ISDODK");
+                    SceneManager.LoadScene(5);
+                }
+            }
+
+
+        }
     }
 }
