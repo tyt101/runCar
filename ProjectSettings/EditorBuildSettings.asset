@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/tyt_dialog/tyt_Scene/chatScene.unity
     guid: d8ee853bc9641c34eaabc319bf3ddf3b
   - enabled: 1
-    path: Assets/lhy_dialog/lhy_Scene/GameStart.unity
+    path: Assets/lhy/lhy_Scene/GameStart.unity
     guid: 9f3d58b1fef36ab40a9349855d2ce699
   - enabled: 1
-    path: Assets/lhy_dialog/lhy_Scene/Load.unity
+    path: Assets/lhy/lhy_Scene/Load.unity
     guid: 53a7ce2b0b1783b4e9e11ca68b36e776
   - enabled: 1
-    path: Assets/lhy_dialog/lhy_Scene/Supermarket.unity
+    path: Assets/lhy/lhy_Scene/Supermarket.unity
     guid: 03c1f132be77712469aaae37a127cb86
   - enabled: 1
     path: Assets/hjy_environment/hjy_Scene/hjyScene.unity

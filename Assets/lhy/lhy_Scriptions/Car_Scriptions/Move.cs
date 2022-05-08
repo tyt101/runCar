@@ -21,7 +21,7 @@ public class Move : MonoBehaviour
     /// </summary>
     public void MoveState()
     {
-        if(Input.GetKey(KeyCode.W))//按下W键向前移动
+        if (Input.GetKey(KeyCode.W))//按下W键向前移动
         {
             if (speed <= 3)
             {
@@ -31,23 +31,23 @@ public class Move : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))//按下D键向右旋转
         {
-            this.transform.Rotate(0, rotationAngle * Time.deltaTime*2, 0);
+            this.transform.Rotate(0, rotationAngle * Time.deltaTime * 2, 0);
         }
-        if(Input.GetKey(KeyCode.A))//按下A键向左旋转
+        if (Input.GetKey(KeyCode.A))//按下A键向左旋转
         {
-            this.transform.Rotate(0, -rotationAngle * Time.deltaTime*2, 0);
+            this.transform.Rotate(0, -rotationAngle * Time.deltaTime * 2, 0);
         }
-        if(Input.GetKey(KeyCode.Z)&& Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.D))
         {
             this.transform.Rotate(0, 50f * Time.deltaTime, 0);
         }
-        if(Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.A))
         {
             this.transform.Rotate(0, -50f * Time.deltaTime, 0);
         }
         if (Input.GetKey(KeyCode.S))//按下W键向前移动
         {
-            
+
             //speed = -1.5f;
             if (speed1 >= -3)
             {
@@ -58,10 +58,15 @@ public class Move : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag=="obstacle")
+        if (col.gameObject.tag == "obstacle")
         {
             this.transform.Translate(-Vector3.forward);
             System.Threading.Thread.Sleep(100);
         }
+        if (col.name == "StartFinishLine")
+        {            
+            GameObject.Find("Canvas").GetComponent<Outcome>().Win();
+            this.enabled = false;
+        }        
     }
 }
