@@ -1,22 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;//引入unity的UI编辑库
 
 public class Catch : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public static int Money = 0;
-    public static Text txt;
-    // Start is called before the first frame update
+    public Move player;//定义PlayerControl类
+    public int score;//定义积分变量
+    public Text ScoreText;//定义要修改的Text
     void Start()
     {
-        //txt = GameObject.Find("Text").GetComponent<Text>();
+        player.GetScore += Player_GetScore;//调用PlayerControl类，订阅Player的得分事件，start函数已经作为了我们的消息接收器
     }
 
-    // Update is called once per frame
+    private void Player_GetScore(int score)//定义消息处理器来处理消息，给属性赋值，改变积分值
+    {
+        Score += score;
+    }
     void Update()
     {
-        //Coin.txt.text = "金币：" + Coin.Money;
+
     }
+    public int Score//定义积分属性，使用属性来进行控制，使每次积分被改变时就调用一次文本显示的修改
+    {
+        get
+        {
+            return score;
+        }
+        set
+        {
+            score = value;
+            ScoreText.text = score.ToString();//让UI显示的分数等于score的值，这里有String类型的转换
+        }
+    }
+
 }
