@@ -82,8 +82,8 @@ public class PlayerController : MonoBehaviour
             {
                 if (SearchDialogManager.instance.currentLine >= SearchDialogManager.instance.dialogueLines.Length)
                 {
-                    Debug.Log(")ISDODK");
-                    SceneManager.LoadScene(5);
+                    Debug.Log(")Doctor");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
 

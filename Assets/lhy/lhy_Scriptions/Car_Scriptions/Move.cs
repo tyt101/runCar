@@ -70,6 +70,7 @@ public class Move : MonoBehaviour
         {            
             GameObject.Find("Canvas").GetComponent<Outcome>().Win();
             this.enabled = false;
+            GameObject.Find("Canvas").GetComponent<Outcome>().showButton();
         }
         /*if (col.gameObject.tag=="coin")//检查Player碰撞的物体是不是
         {
