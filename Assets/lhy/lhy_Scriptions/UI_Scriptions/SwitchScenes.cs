@@ -18,7 +18,7 @@ public class SwitchScenes : MonoBehaviour
     /// </summary>
     public void OnBackBtn()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Load");
     }
 
     /// <summary>
@@ -26,7 +26,7 @@ public class SwitchScenes : MonoBehaviour
     /// </summary>
     public void OnShoppingBtn()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Supermarket");
     }
 
     /// <summary>
@@ -34,6 +34,6 @@ public class SwitchScenes : MonoBehaviour
     /// </summary>
     public void OnLoadGoInBtn()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("TheSecondLevel");
     }
 }

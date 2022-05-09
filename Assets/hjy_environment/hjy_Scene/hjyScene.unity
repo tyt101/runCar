@@ -14057,9 +14057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81462d54d7831654dae70808496fe281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1669049265}
-  score: 0
-  ScoreText: {fileID: 153464917}
+  txtcoin: {fileID: 153464917}
 --- !u!4 &358964878
 Transform:
   m_ObjectHideFlags: 0
@@ -38937,9 +38935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81462d54d7831654dae70808496fe281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  score: 0
-  ScoreText: {fileID: 0}
+  txtcoin: {fileID: 0}
 --- !u!1 &1037173681 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: bdbd9d7226778fd4b8192cf3df5e028d, type: 3}

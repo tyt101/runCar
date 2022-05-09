@@ -7,8 +7,9 @@ using UnityEngine;
 /// </summary>
 public class Move : MonoBehaviour
 {
-    public delegate void PlayerScore(int temp);//定义委托
-    public event PlayerScore GetScore;//定义得分事件，用于发出得分的消息
+    //public delegate void PlayerScore(int temp);//定义委托
+    //public event PlayerScore GetScore;//定义得分事件，用于发出得分的消息
+    
     public float speed = 3;//车移动的速度
     public float speed1 = -3;//车移动的速度
     //[HideInInspector]
@@ -69,15 +70,15 @@ public class Move : MonoBehaviour
         {            
             GameObject.Find("Canvas").GetComponent<Outcome>().Win();
             this.enabled = false;
+            GameObject.Find("Canvas").GetComponent<Outcome>().showButton();
         }
-        if (col.gameObject.tag=="coin")//检查Player碰撞的物体是不是ScoreObj
+        /*if (col.gameObject.tag=="coin")//检查Player碰撞的物体是不是
         {
-            if (GetScore != null)//检查事件是否为空，即有没有接收器订阅它
-            {
-                GetScore(1);//发送得分事件消息，为接收器提供参数1，实现+1分的效果
-            }
-        }
+             GetScore(1);//发送得分事件消息，为接收器提供参数1，实现+1分的效果
+            //if (GetScore != null)//检查事件是否为空，即有没有接收器订阅它
+        }*/
 
 
     }
+
 }

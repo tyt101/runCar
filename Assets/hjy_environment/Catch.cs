@@ -11,7 +11,6 @@ public class Catch : MonoBehaviour
         GameObject ifCollect = GameObject.Find("/Canvas/Money/ScoreText");
         ifCollect.GetComponent<Text>().text = Coin.Money.ToString();
     }
-
     /*public Move Car;//定义PlayerControl类
     public int score;//定义积分变量
     public Text ScoreText;//定义要修改的Text

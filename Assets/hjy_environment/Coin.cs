@@ -7,6 +7,7 @@ public class Coin : MonoBehaviour
 {
     public float rotationSpeed = 200.0f;
     public static int Money = 0;
+ 
     //public static Text txt;
     // Start is called before the first frame update
     /*void Start()
@@ -27,11 +28,12 @@ public class Coin : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            //col.gameObject.SendMessage("CoinPickup");
+            
             Money++;
             Destroy(gameObject);
             //Catch.txt.text = "½ð±Ò£º" + Catch.Money;
         }
+        
 
 
     }

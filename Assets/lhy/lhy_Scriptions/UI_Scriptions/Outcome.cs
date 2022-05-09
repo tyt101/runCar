@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Outcome : MonoBehaviour
 {
     GameObject Hb;//定义血条对象
+    public GameObject button;
     public void Awake()
     {
         Hb = GameObject.Find("Canvas/HealthBars");//获取血条对象
@@ -25,6 +26,10 @@ public class Outcome : MonoBehaviour
     public void Defeat()
     {
         transform.Find("Defeat").GetComponent<Text>().enabled = true;        
+    }
+    public void showButton()
+    {
+        button.SetActive(true);
     }
     public void Update()
     {
