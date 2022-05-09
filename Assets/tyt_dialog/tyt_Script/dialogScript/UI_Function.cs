@@ -16,6 +16,6 @@ public class UI_Function : MonoBehaviour
     public void load()
     {
         InteratorDialog.instance.btn.SetActive(false);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("One1Scence");
     }
 }
