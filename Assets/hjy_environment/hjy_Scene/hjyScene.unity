@@ -55740,6 +55740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1473694089}
+  - component: {fileID: 1473694090}
   m_Layer: 0
   m_Name: animal
   m_TagString: Untagged
@@ -55778,6 +55779,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1473694090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473694088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7208530d0ff8d13498e7fbe52e4517a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1474395178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: bdbd9d7226778fd4b8192cf3df5e028d, type: 3}
@@ -62890,6 +62903,7 @@ GameObject:
   - component: {fileID: 1669049266}
   - component: {fileID: 1669049265}
   - component: {fileID: 1669049267}
+  - component: {fileID: 1669049268}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -62941,6 +62955,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0094321, y: 0.7728758, z: 1.2989175}
   m_Center: {x: 0.22261086, y: -0.7197045, z: 0.14945816}
+--- !u!114 &1669049268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669049264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e2822136cad35478811855a2992c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1669648711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ae9f073041fc5d24e988970ad76626d2, type: 3}

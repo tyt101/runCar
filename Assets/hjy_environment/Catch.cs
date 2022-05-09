@@ -5,12 +5,12 @@ using UnityEngine.UI;//引入unity的UI编辑库
 
 public class Catch : MonoBehaviour
 {
-    public Move player;//定义PlayerControl类
+    public Move player;//定义类
     public int score;//定义积分变量
     public Text ScoreText;//定义要修改的Text
     void Start()
     {
-        player.GetScore += Player_GetScore;//调用PlayerControl类，订阅Player的得分事件，start函数已经作为了我们的消息接收器
+        //player.GetScore += Player_GetScore;//调用类，订阅Player的得分事件，start函数已经作为了我们的消息接收器
     }
 
     private void Player_GetScore(int score)//定义消息处理器来处理消息，给属性赋值，改变积分值

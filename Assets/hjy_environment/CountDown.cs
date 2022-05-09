@@ -12,6 +12,7 @@ public class CountDown : MonoBehaviour
 	private float intervaltime = 1;
 	//public float times = 60;
 	//private int s;//定义一个秒
+	bool Usable = false;
 
 	void Start()
 	{
@@ -45,11 +46,28 @@ public class CountDown : MonoBehaviour
 		{
 			//判定倒计时结束时该做什么
 		}*/
+		Stop();
 	}
 
     private void Gameover()
     {
         throw new NotImplementedException();
     }
+
+	public void Stop()
+    {
+		if (Input.GetKeyDown(KeyCode.Q) && Usable == false)
+		{
+			Debug.Log("暂停");
+			Time.timeScale = 0;
+			Usable = true;
+		}
+		if (Input.GetKeyDown(KeyCode.E) && Usable == true)
+		{
+			Debug.Log("继续");
+			Time.timeScale = 1;
+			Usable = false;
+		}
+	}
  
 }
