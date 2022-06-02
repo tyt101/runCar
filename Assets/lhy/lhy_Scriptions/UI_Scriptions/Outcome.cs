@@ -10,14 +10,15 @@ public class Outcome : MonoBehaviour
     public void Awake()
     {
         Hb = GameObject.Find("Canvas/HealthBars");//获取血条对象
-    }    
-
+        //button = GameObject.Find("Canvas/buttonGameObject");
+    }
+   
     /// <summary>
     /// 当游戏通关时，显示游戏通关的文本
     /// </summary>
     public void Win()
-    {        
-        transform.Find("Win").GetComponent<Text>().enabled = true;
+    {
+            transform.Find("Win").GetComponent<Text>().enabled = true;
     }
 
     /// <summary>
@@ -25,7 +26,7 @@ public class Outcome : MonoBehaviour
     /// </summary>
     public void Defeat()
     {
-        transform.Find("Defeat").GetComponent<Text>().enabled = true;        
+       transform.Find("Defeat").GetComponent<Text>().enabled = true;        
     }
     public void showButton()
     {

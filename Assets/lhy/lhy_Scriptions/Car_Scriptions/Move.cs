@@ -72,6 +72,15 @@ public class Move : MonoBehaviour
             this.enabled = false;
             if(GameObject.Find("Canvas"))
             GameObject.Find("Canvas").GetComponent<Outcome>().showButton();
+            //GetComponent<Outcome>().showButton();
+        }
+        if (col.name == "StartFinishLine1")
+        {
+            GameObject.Find("Canvas").GetComponent<Outcome>().Win();
+            this.enabled = false;
+            if (Coin.Money >= 120 && CountDown.totaltime >= 0)
+                GameObject.Find("Canvas").GetComponent<Outcome>().showButton();
+
         }
         /*if (col.gameObject.tag=="coin")//检查Player碰撞的物体是不是
         {

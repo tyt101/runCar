@@ -20,8 +20,8 @@ public class UI_Function : MonoBehaviour
     }
     public void next()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        Debug.Log(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void again()
     {

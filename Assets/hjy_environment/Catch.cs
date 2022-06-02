@@ -6,7 +6,7 @@ using UnityEngine.UI;//ÒýÈëunityµÄUI±à¼­¿â
 public class Catch : MonoBehaviour
 {
     public Text txtcoin;
-    void Update()
+    void FixedUpdate()
     {
         GameObject ifCollect = GameObject.Find("/Canvas/Money/ScoreText");
         ifCollect.GetComponent<Text>().text = Coin.Money.ToString();

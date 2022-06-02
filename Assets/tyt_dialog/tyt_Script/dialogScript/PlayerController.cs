@@ -53,9 +53,9 @@ public class PlayerController : MonoBehaviour
         if (isMove)
         {
             if (Keyboard.current.aKey.isPressed)
-                this.transform.Rotate(0, -1, 0);
+                this.transform.Rotate(0, (float)-0.5, 0);
             if (Keyboard.current.dKey.isPressed)
-                this.transform.Rotate(0, 1, 0);
+                this.transform.Rotate(0, (float)0.5, 0);
         }
 
     }
